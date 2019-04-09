@@ -3,7 +3,7 @@
 const assert = require('assert');
 const ONS = require('./lib/ons');
 const { unSubscribe, getProcessCount } = require('./lib/utils');
-const { sleep, doWhile } = require('pure-func/promise');
+const { sleep } = require('pure-func/promise');
 
 class AppBootHook {
   constructor(app) {
@@ -43,11 +43,11 @@ class AppBootHook {
     const consumers = Array.from(app.ons.consumerMap.values());
     unSubscribe(consumers);
     await sleep(1000);
-    const processCount = getProcessCount(consumers);
-    await doWhile(async () => {
+    let processCount = getProcessCount(consumers);
+    while (processCount > 0) {
       await sleep(processCount * 100);
-      return getProcessCount(consumers);
-    }, processCount => processCount > 0);
+      processCount = getProcessCount(consumers);
+    }
     await Promise.all(consumers.map(consumer => {
       return consumer.close();
     }));
