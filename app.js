@@ -15,15 +15,19 @@ class AppBootHook {
   }
   async willReady() {
     const { app } = this;
+    const consumerKeys = [ ...app.ons.consumerMap.keys() ];
     for (const sub of app.config.ons.sub) {
       for (const topic of sub.topics) {
-        const consumer = app.ons.consumerMap.get(
-          Array.from(app.ons.consumerMap.keys()).find(key => key.includes(sub.consumerGroup))
-        );
-        await consumer.ready();
         if (!topic.indexOf('%')) {
-          return;
+          continue;
         }
+        const consumer = app.ons.consumerMap.get(
+          consumerKeys.find(key => key.includes(sub.consumerGroup))
+        );
+        if (!consumer) {
+          continue;
+        }
+        await consumer.ready();
         const subscribeKey = topic.split('%')[1];
         const Subscriber = app.ONSSubscribers[subscribeKey];
         assert.ok(Subscriber);
@@ -40,7 +44,8 @@ class AppBootHook {
   }
   async beforeClose() {
     const { app } = this;
-    const consumers = Array.from(app.ons.consumerMap.values());
+    const consumers = [ ...app.ons.consumerMap.values() ];
+    const producers = [ ...app.ons.producerMap.values() ];
     unSubscribe(consumers);
     await sleep(1000);
     let processCount = getProcessCount(consumers);
@@ -51,9 +56,6 @@ class AppBootHook {
     await Promise.all(consumers.map(consumer => {
       return consumer.close();
     }));
-    const producers = Array.from(
-      app.ons.producerMap.values()
-    );
     await Promise.all(producers.map(producer => {
       return producer.close();
     }));
