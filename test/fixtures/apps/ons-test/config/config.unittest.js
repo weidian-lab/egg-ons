@@ -10,16 +10,20 @@ exports.ons = {
     secretKey: config.secretKey,
     onsAddr: config.onsAddr,
   },
-  sub: [{
-    consumerGroup: config.consumerGroup,
-    topics: [
-      'TEST_TOPIC',
-    ],
-  }],
-  pub: [{
-    producerGroup: config.producerGroup,
-    topics: [
-      'TEST_TOPIC',
-    ],
-  }],
+  sub: {
+    default: {
+      consumerGroup: config.consumerGroup,
+      topics: [
+        'TEST_TOPIC',
+      ],
+    },
+  },
+  pub: {
+    defualt: {
+      producerGroup: config.producerGroup,
+      topics: [
+        'TEST_TOPIC',
+      ],
+    },
+  },
 };

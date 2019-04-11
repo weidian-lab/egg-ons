@@ -19,8 +19,8 @@ module.exports = appInfo => {
         // accessKey: 'your-accesskey',
         // secretKey: 'your-secretkey',
       },
-      sub: [
-        // {
+      sub: {
+        // default: {
         //   consumerGroup: 'your-group',
         //   accessKey: 'your-accesskey',
         //   secretKey: 'your-secretkey',
@@ -29,9 +29,9 @@ module.exports = appInfo => {
         //     'your-topic-2',
         //   ],
         // }
-      ],
-      pub: [
-        // {
+      },
+      pub: {
+        // default: {
         //   producerGroup: 'your-group',
         //   accessKey: 'your-accesskey',
         //   secretKey: 'your-secretkey',
@@ -40,7 +40,7 @@ module.exports = appInfo => {
         //     'your-topic-2',
         //   ],
         // }
-      ],
+      },
     },
     customLogger: {
       onsLogger: {
