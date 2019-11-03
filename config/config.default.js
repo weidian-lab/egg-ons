@@ -10,8 +10,8 @@ module.exports = appInfo => {
      */
     ons: {
       default: {
-        accessKeyId: '',
-        accessKeySecret: '',
+        accessKey: '',
+        secretKey: '',
         instanceId: '',
         endpoint: '',
         // 公有云生产环境：http://onsaddr-internal.aliyun.com:8080/rocketmq/nsaddr4client-internal
@@ -44,7 +44,7 @@ module.exports = appInfo => {
     },
     customLogger: {
       onsLogger: {
-        consoleLevel: 'NONE',
+        consoleLevel: 'INFO',
         file: path.join(appInfo.root, 'logs', appInfo.name, 'ons.log'),
       },
     },
