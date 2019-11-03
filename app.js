@@ -1,9 +1,6 @@
 'use strict';
 
-const assert = require('assert');
 const ONS = require('./lib/ons');
-const { unSubscribe, getProcessCount } = require('./lib/utils');
-const { sleep } = require('pure-func/promise');
 
 class AppBootHook {
   constructor(app) {
@@ -15,23 +12,11 @@ class AppBootHook {
   }
   async beforeClose() {
     const { app } = this;
-    const consumers = [ ...app.ons.consumerMap.values() ];
-    const producers = [ ...app.ons.producerMap.values() ];
-    unSubscribe(consumers);
-    await sleep(1000);
-    let processCount = getProcessCount(consumers);
-    while (processCount > 0) {
-      await sleep(processCount * 100);
-      processCount = getProcessCount(consumers);
-    }
-    await Promise.all(consumers.map(async consumer => {
-      await consumer.close();
-      app.ons.logger.info('[egg-ons] consumer: %s is closed, messageModel: %s', consumer.consumerGroup, consumer.messageModel);
+    app.ons.logger.info('[egg-ons] beforeClose');
+    await Promise.all(app.ons.consumers.map(consumer => {
+      return consumer.safeClose();
     }));
-    await Promise.all(producers.map(async producer => {
-      await producer.close();
-      app.ons.logger.info('[egg-ons] producer: %s is closed', producer.producerGroup);
-    }));
+    app.ons.logger.info('[egg-ons] closed');
   }
 }
 
