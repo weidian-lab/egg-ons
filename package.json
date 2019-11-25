@@ -11,7 +11,7 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "mq-http-sdk": "^1.0.8",
+    "mq-http-sdk": "^1.1.0",
     "pure-func": "^2.1.0"
   },
   "devDependencies": {
