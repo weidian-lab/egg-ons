@@ -1,6 +1,6 @@
 {
   "name": "egg-wd-ons",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "aliyun ons plugin for egg",
   "eggPlugin": {
     "name": "ons"
@@ -11,8 +11,8 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "mq-http-sdk": "^1.0.2",
-    "pure-func": "^2.0.2"
+    "mq-http-sdk": "^1.0.8",
+    "pure-func": "^2.1.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
