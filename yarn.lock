@@ -6102,7 +6102,7 @@ punycode@^2.1.0:
   resolved "https://registry.npm.taobao.org/punycode/download/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha1-tYsBCsQMIsVldhbI0sLALHv0eew=
 
-pure-func@^2.0.19, pure-func@^2.1.0:
+pure-func@^2.0.19:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/pure-func/download/pure-func-2.1.0.tgz?cache=0&sync_timestamp=1573523992029&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpure-func%2Fdownload%2Fpure-func-2.1.0.tgz#3448e3c672c4c6c7567ca42c0643a17a40c6e422"
   integrity sha1-NEjjxnLExsdWfKQsBkOhekDG5CI=
