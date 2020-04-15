@@ -10,6 +10,9 @@ class AppBootHook {
   async didLoad() {
     await this.app.ons.init();
   }
+  async didReady() {
+    await this.app.ons.initConsumer();
+  }
   async beforeClose() {
     const { app } = this;
     app.ons.logger.info('[egg-ons] beforeClose');
