@@ -5623,10 +5623,10 @@ moment-timezone@^0.5.25:
   resolved "https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmoment%2Fdownload%2Fmoment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha1-DQVdU/UFKqZTyfbraLtdEr9cK1s=
 
-mq-http-sdk@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.npm.taobao.org/mq-http-sdk/download/mq-http-sdk-1.4.1.tgz?cache=0&sync_timestamp=1586920140126&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmq-http-sdk%2Fdownload%2Fmq-http-sdk-1.4.1.tgz#8e63f97f4d57be2ce9ff7942e22b5b14a4b63065"
-  integrity sha1-jmP5f01Xvizp/3lC4itbFKS2MGU=
+mq-http-sdk@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.npm.taobao.org/mq-http-sdk/download/mq-http-sdk-1.5.2.tgz#93d32a2e59ef899a721237043418a4ec6b468f58"
+  integrity sha1-k9MqLlnviZpyEjcENBik7GtGj1g=
   dependencies:
     chalk "^2.4.2"
     debug "^4.1.1"
