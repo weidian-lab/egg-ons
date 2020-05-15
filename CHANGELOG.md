@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.7](https://github.com/eggjs/egg-ons/compare/v3.3.6...v3.3.7) (2020-05-15)
+
+
+### Bug Fixes
+
+* default topic ([4ceed68](https://github.com/eggjs/egg-ons/commit/4ceed68f0b5d8ce5a48c5fdf60813f305f8291b3))
+
 ### [3.3.6](https://github.com/eggjs/egg-ons/compare/v3.3.5...v3.3.6) (2020-05-06)
 
 ### [3.3.5](https://github.com/eggjs/egg-ons/compare/v3.3.4...v3.3.5) (2020-04-24)
