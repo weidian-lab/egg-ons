@@ -1,6 +1,6 @@
 {
   "name": "egg-wd-ons",
-  "version": "3.3.8",
+  "version": "3.3.9",
   "description": "aliyun ons plugin for egg",
   "eggPlugin": {
     "name": "ons"
