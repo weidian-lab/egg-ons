@@ -11,7 +11,7 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "mq-http-sdk": "^1.6.2",
+    "mq-http-sdk": "^1.7.0",
     "shortid": "^2.2.15"
   },
   "devDependencies": {
