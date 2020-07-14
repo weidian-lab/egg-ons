@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.1](https://github.com/eggjs/egg-ons/compare/v3.4.0...v3.4.1) (2020-07-14)
+
+
+### Bug Fixes
+
+* lost shortId ([f594c5f](https://github.com/eggjs/egg-ons/commit/f594c5f421bd340c622fdd2f21626bc356f5f880))
+
 ## [3.4.0](https://github.com/eggjs/egg-ons/compare/v3.3.11...v3.4.0) (2020-07-14)
 
 
