@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/eggjs/egg-ons/compare/v3.3.11...v3.4.0) (2020-07-14)
+
+
+### Features
+
+* context.sendJsonToOns ([8fe68a0](https://github.com/eggjs/egg-ons/commit/8fe68a0e6166fe04f6fd3b0fece0c7b31e91f0de))
+
 ### [3.3.11](https://github.com/eggjs/egg-ons/compare/v3.3.10...v3.3.11) (2020-07-10)
 
 ### [3.3.10](https://github.com/eggjs/egg-ons/compare/v3.3.9...v3.3.10) (2020-06-24)
