@@ -1,4 +1,5 @@
 'use strict';
+const shortId = require('shortid');
 
 module.exports = {
   get ons() {
