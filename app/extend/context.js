@@ -15,7 +15,7 @@ module.exports = {
     });
     const ret = await this.app.ons.getProducer(producerId, topic)
       .sendMsg(msg, distTag, msgOpts);
-    this.logger.info('[ons.send]', producerId, topic || '', distTag, msg);
+    this.logger.info('[ons.send]', producerId, topic || '', distTag, msg, ret);
     return ret;
   },
 };
