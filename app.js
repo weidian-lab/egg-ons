@@ -10,11 +10,13 @@ class AppBootHook {
 
   async didLoad() {
     await this.app.ons.init();
+    this.app.coreLogger.info('[egg-ons] inited');
   }
 
   async didReady() {
     await new Promise((resolve, reject) => {
       setTimeout(() => {
+        this.app.coreLogger.info('[egg-ons] initConsumer');
         this.app.ons.initConsumer().then(resolve).catch(reject);
       }, 1000);
     });
