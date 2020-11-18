@@ -46,12 +46,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-ons.git"
+    "url": "git+https://github.com/weidian-lab/egg-ons.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/weidian-lab/egg-ons/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-ons#readme",
+  "homepage": "https://github.com/weidian-lab/egg-ons#readme",
   "author": "gxcsoccer <gxcsoccer@126.com>",
   "license": "MIT"
 }
